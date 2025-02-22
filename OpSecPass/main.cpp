@@ -2,6 +2,7 @@
 #include "PasswordManager.h"
 #include "PasswordGenerator.h"
 #include "SecureString.h"
+#include <sodium.h>
 
 using namespace std;
 

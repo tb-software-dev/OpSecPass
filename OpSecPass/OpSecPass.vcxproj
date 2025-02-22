@@ -104,14 +104,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\tobia\Desktop\DevOps\vcpkg\packages\openssl_x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\tobia\Desktop\DevOps\vcpkg\packages\openssl_x64-windows\include;C:\Users\tobia\Desktop\DevOps\vcpkg\packages\libsodium_x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libssl.lib;libcrypto.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\tobia\Desktop\DevOps\vcpkg\packages\openssl_x64-windows\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libssl.lib;libcrypto.lib;libsodium.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\tobia\Desktop\DevOps\vcpkg\packages\openssl_x64-windows\lib;C:\Users\tobia\Desktop\DevOps\vcpkg\packages\libsodium_x64-windows\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -131,16 +131,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AesGcm.cpp" />
     <ClCompile Include="CryptoHelper.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PasswordGenerator.cpp" />
     <ClCompile Include="PasswordManager.cpp" />
+    <ClCompile Include="SecureBuffer.cpp" />
     <ClCompile Include="SecureString.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AesGcm.h" />
     <ClInclude Include="CryptoHelper.h" />
     <ClInclude Include="PasswordGenerator.h" />
     <ClInclude Include="PasswordManager.h" />
+    <ClInclude Include="SecureBuffer.h" />
     <ClInclude Include="SecureString.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

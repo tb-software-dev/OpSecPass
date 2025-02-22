@@ -30,6 +30,12 @@
     <ClCompile Include="PasswordManager.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="SecureBuffer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="AesGcm.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SecureString.h">
@@ -42,6 +48,12 @@
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="PasswordManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="SecureBuffer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="AesGcm.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
