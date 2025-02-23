@@ -10,18 +10,21 @@ using namespace std;
 class SecureBuffer
 {
 public:
+    explicit SecureBuffer(size_t size);
+    ~SecureBuffer();
 
-	explicit SecureBuffer(size_t size);
-	~SecureBuffer();
+    // Move-Semantik explizit erlauben
+    SecureBuffer(SecureBuffer&&) = default;
+    SecureBuffer& operator=(SecureBuffer&&) = default;
 
-	// Move-only Semantik
-	SecureBuffer(const SecureBuffer&) = delete;
-	SecureBuffer& operator=(const SecureBuffer&) = delete;
+    // Kopieren verbieten
+    SecureBuffer(const SecureBuffer&) = delete;
+    SecureBuffer& operator=(const SecureBuffer&) = delete;
 
-	uint8_t* data();
-	const uint8_t* data() const;
-	size_t size() const;
+    uint8_t* data();
+    const uint8_t* data() const;
+    size_t size() const;
 
 private:
-	unique_ptr<vector<uint8_t>>data_;
+    unique_ptr<vector<uint8_t>> data_;
 };

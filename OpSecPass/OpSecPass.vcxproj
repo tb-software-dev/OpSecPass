@@ -104,14 +104,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\tobia\Desktop\DevOps\vcpkg\packages\openssl_x64-windows\include;C:\Users\tobia\Desktop\DevOps\vcpkg\packages\libsodium_x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>H:\vcpkg-2025.02.14\vcpkg-2025.02.14\packages\openssl_x64-windows\include;H:\vcpkg-2025.02.14\vcpkg-2025.02.14\packages\libsodium_x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>libssl.lib;libcrypto.lib;libsodium.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\tobia\Desktop\DevOps\vcpkg\packages\openssl_x64-windows\lib;C:\Users\tobia\Desktop\DevOps\vcpkg\packages\libsodium_x64-windows\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>H:\vcpkg-2025.02.14\vcpkg-2025.02.14\packages\openssl_x64-windows\lib;H:\vcpkg-2025.02.14\vcpkg-2025.02.14\packages\libsodium_x64-windows\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
