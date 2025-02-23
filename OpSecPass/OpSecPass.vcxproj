@@ -136,19 +136,23 @@
     <ClCompile Include="CryptoHelper.cpp" />
     <ClCompile Include="KeyDerivation.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MasterKey.cpp" />
     <ClCompile Include="PasswordGenerator.cpp" />
     <ClCompile Include="PasswordManager.cpp" />
     <ClCompile Include="SecureBuffer.cpp" />
     <ClCompile Include="SecureString.cpp" />
+    <ClCompile Include="Security.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AesGcm.h" />
     <ClInclude Include="CryptoHelper.h" />
     <ClInclude Include="KeyDerivation.h" />
+    <ClInclude Include="MasterKey.h" />
     <ClInclude Include="PasswordGenerator.h" />
     <ClInclude Include="PasswordManager.h" />
     <ClInclude Include="SecureBuffer.h" />
     <ClInclude Include="SecureString.h" />
+    <ClInclude Include="Security.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="POC.txt" />

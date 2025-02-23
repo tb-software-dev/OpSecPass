@@ -39,6 +39,12 @@
     <ClCompile Include="KeyDerivation.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="Security.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="MasterKey.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SecureString.h">
@@ -60,6 +66,12 @@
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="KeyDerivation.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Security.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="MasterKey.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,8 +1,11 @@
 #include <iostream>
+#include <cstring>
+#include <sodium.h>
+#include "MasterKey.h"
+#include "AesGcm.h"
+#include "SecureBuffer.h"
 #include "PasswordManager.h"
 #include "PasswordGenerator.h"
-#include "SecureString.h"
-#include <sodium.h>
 
 using namespace std;
 
@@ -12,7 +15,7 @@ int main()
 	try
 	{
 		PasswordManager manager;
-		string master = "80838083";
+		string master = "Test";
 		cout << "Gib dein Master-Passwort ein: ";
 		cin >> master;
 		SecureString master_password(master);
@@ -30,8 +33,7 @@ int main()
 		return 1;
 	}
 
-
-
-
-	return 0;
+    
+    system("pause");
+    return 0;
 }
