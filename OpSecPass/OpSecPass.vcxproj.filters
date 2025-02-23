@@ -36,6 +36,9 @@
     <ClCompile Include="AesGcm.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="KeyDerivation.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SecureString.h">
@@ -56,5 +59,11 @@
     <ClInclude Include="AesGcm.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="KeyDerivation.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="POC.txt" />
   </ItemGroup>
 </Project>

@@ -134,6 +134,7 @@
   <ItemGroup>
     <ClCompile Include="AesGcm.cpp" />
     <ClCompile Include="CryptoHelper.cpp" />
+    <ClCompile Include="KeyDerivation.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PasswordGenerator.cpp" />
     <ClCompile Include="PasswordManager.cpp" />
@@ -143,10 +144,14 @@
   <ItemGroup>
     <ClInclude Include="AesGcm.h" />
     <ClInclude Include="CryptoHelper.h" />
+    <ClInclude Include="KeyDerivation.h" />
     <ClInclude Include="PasswordGenerator.h" />
     <ClInclude Include="PasswordManager.h" />
     <ClInclude Include="SecureBuffer.h" />
     <ClInclude Include="SecureString.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="POC.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
