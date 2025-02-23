@@ -14,7 +14,7 @@ AesGcm::EncryptedData AesGcm::encrypt(const SecureBuffer& plaintext, const Secur
 	// Überprüft ob der Key tatsächlich 32 Bytes(256 Bit) lang ist
 	if (key.size() != 32)
 	{
-		throw runtime_error("Invalid key size");
+		throw runtime_error("Error Key Size!!!");
 	}
 
 	EncryptedData result(plaintext.size());
@@ -27,14 +27,14 @@ AesGcm::EncryptedData AesGcm::encrypt(const SecureBuffer& plaintext, const Secur
 
 	if (!ctx)
 	{
-		throw runtime_error("cipher Context Create ERROR!!!");
+		throw runtime_error("Fehler beim Erstellen des Kontexts");
 	}
 
 	// Anwenden der AES-256-GCM Verschlüsselung
 	if (EVP_EncryptInit_ex(ctx, EVP_aes_256_gcm(), nullptr, key.data(), result.iv.data()) != 1)
 	{
 		EVP_CIPHER_CTX_free(ctx);
-		throw runtime_error("Encryption Init failed");
+		throw runtime_error("Fehler beim Verschlüsseln");
 	}
 
 	int out_len = 0;
@@ -42,7 +42,7 @@ AesGcm::EncryptedData AesGcm::encrypt(const SecureBuffer& plaintext, const Secur
 	if (EVP_EncryptUpdate(ctx, result.ciphertext.data(), &out_len, plaintext.data(), plaintext.size()) != 1)
 	{
 		EVP_CIPHER_CTX_free(ctx);
-		throw runtime_error("Encryption update failed");
+		throw runtime_error("Fehler bei der Finalisierung");
 	}
 
 	int final_out_len = 0;
@@ -82,7 +82,7 @@ SecureBuffer AesGcm::decrypt(const EncryptedData& data,
     // Erzeugt einen neuen Entschlüsselungskontext.
     EVP_CIPHER_CTX* ctx = EVP_CIPHER_CTX_new();
     if (!ctx)
-        throw runtime_error("Failed to create cipher context");
+        throw runtime_error("Fehler beim Erstellen des Kontexts");
 
     // Initialisiert den Kontext für AES-256-GCM-Entschlüsselung mit dem Schlüssel und IV.
     if (EVP_DecryptInit_ex(ctx, EVP_aes_256_gcm(), nullptr, key.data(), data.iv.data()) != 1)
