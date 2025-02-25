@@ -74,6 +74,9 @@
     <ClInclude Include="MasterKey.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="SafeVault.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="POC.txt" />
